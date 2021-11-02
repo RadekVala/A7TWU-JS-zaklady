@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS základy</title>
+  </head>
+  <body>
+    <h1 id="myH1ID">Výchozí text H1</h1>
+    <h2 id="myH2ID">Výchozí text H2</h2>
+    <h3 id="myH3ID">Výchozí text H3</h3>
+    <h4 id="myH4ID">Výchozí text H4</h4>
+
+    <br />
+
+    <button>Výchozí text tlačítka</button>
+    <button>Výchozí text tlačítka</button>
+
+    <br />
+    <br />
+
+    <div id="myDIV1" style="border-top: 1px solid; border-bottom: 1px solid;">
+      <p class="myPClass">
+        Výchozí text
+      </p>
+
+      <p class="myPClass">
+        Výchozí text
+      </p>
+
+      <p class="myPClass">
+        Výchozí text
+      </p>
+    </div>
+
+    <div id="myDIV2" style="border-bottom: 1px solid;">
+      <p class="myPClass">
+        Výchozí text
+      </p>
+
+      <p class="myPClass">
+        Výchozí text
+      </p>
+    </div>
+
+    <script src="js/main.js" async defer></script>
+
+    <script>
+      // querySelectory ***************************************************************
+      // PROSTY querySelector:
+      document.querySelector("#myH1ID").innerHTML =
+        "Text byl vložen z lokálního skriptu v index.html pomocí querySelectoru.";
+
+      // PROMENNA POMOCI querySelectoru:
+      var varElementQS = document.querySelector("#myH2ID");
+      varElementQS.innerHTML =
+        "Text byl vložen z lokálního skriptu v index.html pomocí querySelectoru.";
+      varElementQS.style.backgroundColor = "red";
+      varElementQS.addEventListener("click", function () {
+        this.style.color = "green";
+        console.log("heading was clicked");
+      });
+
+      varElementQS.setAttribute(
+        "style",
+        "background-color: blue; color: white; text-transform: uppercase;"
+      );
+    </script>
+  </body>
+  <script>
+    //alert("Toto je varování");
+  </script>
+</html>
